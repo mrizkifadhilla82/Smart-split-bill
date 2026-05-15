@@ -44,7 +44,19 @@ Dipilih **Llama-4-Scout (Groq)** karena kecepatan inference yang sangat tinggi (
 
 ---
 
-## 🔍 3. Evaluasi dan Analisis (Step 3)
+## 📸 3. Contoh Hasil Pembacaan Model (Requirement D)
+Berikut adalah ringkasan hasil ekstraksi dari 2 gambar nota yang digunakan dalam tahap riset (tersedia di folder `research/`):
+
+*   **Nota 1 (nota_1.jpeg):**
+    *   **Kasus Spesifik:** Nota dengan item Qty > 1 (Contoh: Es Teh Manis).
+    *   **Hasil:** AI berhasil memvalidasi harga satuan setelah melalui instruksi *Prompt Engineering*. Model mampu membagi total harga item dengan kuantitasnya secara tepat sehingga harga per porsi akurat sebelum dibagikan ke peserta.
+*   **Nota 2 (nota_2.jpeg):**
+    *   **Kasus Spesifik:** Nota restoran dengan pajak dan servis.
+    *   **Hasil:** AI berhasil mengekstraksi Nama Item, Qty, dan Harga Satuan secara presisi, serta mengidentifikasi biaya tambahan seperti pajak untuk perhitungan proporsional.
+
+---
+
+## 🔍 4. Evaluasi dan Analisis (Step 3)
 
 ### A. Evaluasi Model Pembaca Bill
 *   **Kelemahan Logika:** Pada riset awal, model sempat kesulitan membedakan antara Harga Satuan dan Total Harga Item ketika kuantitas (Qty) lebih dari satu. AI cenderung menganggap harga total sebagai harga satuannya.
@@ -60,7 +72,7 @@ Dipilih **Llama-4-Scout (Groq)** karena kecepatan inference yang sangat tinggi (
 
 ---
 
-## 📁 4. Struktur Folder Proyek
+## 📁 5. Struktur Folder Proyek
 - `app.py`: Entry point aplikasi menggunakan Streamlit (Menangani UI dan Logic Alur Requirement A-G).
 - `prompts.py`: Berisi instruksi sistem (System Message) untuk LLM guna menangani logika ekstraksi JSON dan perbaikan perhitungan item (kasus "Es Teh").
 - `libs/`:
