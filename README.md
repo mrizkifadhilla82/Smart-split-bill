@@ -60,7 +60,7 @@ Berikut adalah ringkasan hasil ekstraksi dari 2 gambar nota yang digunakan dalam
 
 ### A. Evaluasi Model Pembaca Bill
 *   **Kelemahan Logika:** Pada riset awal, model sempat kesulitan membedakan antara Harga Satuan dan Total Harga Item ketika kuantitas (Qty) lebih dari satu. AI cenderung menganggap harga total sebagai harga satuannya.
-*   **Solusi Improvisasi:** Kami menggunakan *Prompt Engineering* yang memaksa AI melakukan kalkulasi pembagian (Total Item / Qty) untuk mendapatkan harga satuan yang benar secara otomatis.
+*   **Solusi Improvisasi:** Menggunakan *Prompt Engineering* yang memaksa AI melakukan kalkulasi pembagian (Total Item / Qty) untuk mendapatkan harga satuan yang benar secara otomatis.
 
 ### B. Evaluasi Produk Web (Streamlit)
 *   **Kelemahan UX (Manual Fatigue):** Aplikasi ini terasa kurang efisien ketika menangani nota dengan jumlah item yang sangat banyak dan jumlah peserta yang banyak. Proses memilih nama pembayar satu per satu untuk setiap baris item memakan waktu dan melelahkan bagi pengguna.
